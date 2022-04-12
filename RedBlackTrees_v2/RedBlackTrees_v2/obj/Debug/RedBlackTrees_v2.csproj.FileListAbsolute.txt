@@ -1,0 +1,8 @@
+C:\Users\ofgag\source\repos\RedBlackTrees_v2\RedBlackTrees_v2\bin\Debug\RedBlackTrees_v2.exe.config
+C:\Users\ofgag\source\repos\RedBlackTrees_v2\RedBlackTrees_v2\bin\Debug\RedBlackTrees_v2.exe
+C:\Users\ofgag\source\repos\RedBlackTrees_v2\RedBlackTrees_v2\bin\Debug\RedBlackTrees_v2.pdb
+C:\Users\ofgag\source\repos\RedBlackTrees_v2\RedBlackTrees_v2\obj\Debug\RedBlackTrees_v2.csproj.AssemblyReference.cache
+C:\Users\ofgag\source\repos\RedBlackTrees_v2\RedBlackTrees_v2\obj\Debug\RedBlackTrees_v2.csproj.SuggestedBindingRedirects.cache
+C:\Users\ofgag\source\repos\RedBlackTrees_v2\RedBlackTrees_v2\obj\Debug\RedBlackTrees_v2.csproj.CoreCompileInputs.cache
+C:\Users\ofgag\source\repos\RedBlackTrees_v2\RedBlackTrees_v2\obj\Debug\RedBlackTrees_v2.exe
+C:\Users\ofgag\source\repos\RedBlackTrees_v2\RedBlackTrees_v2\obj\Debug\RedBlackTrees_v2.pdb
