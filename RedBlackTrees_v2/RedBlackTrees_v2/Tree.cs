@@ -86,16 +86,7 @@ namespace RedBlackTrees_v2
         }
 
         public void RedBlackInsert(Tree T, Node z)
-        {/*
-            if (T.Root == null)
-            {
-                T.Root = z;
-                z.Color = Color.BLACK;
-                z.Parent = NIL;
-                z.Left = NIL;
-                z.Right = NIL;
-                return;
-            }*/
+        {
             Node y = NIL;
             Node x = T.Root;
             while (x != NIL)
@@ -105,9 +96,13 @@ namespace RedBlackTrees_v2
                 {
                     x = x.Left;
                 }
-                else
+                else if(z.Key > x.Key)
                 {
                     x = x.Right;
+                }
+                else // do not allow duplicate keys
+                {
+                    return;
                 }
             }
 
@@ -277,7 +272,7 @@ namespace RedBlackTrees_v2
                         w = x.Parent.Right;
                     }
 
-                    if (w.Left.Color == Color.BLACK && w.Right.Color == Color.BLACK)    // Maybe else if?
+                    if (w.Left.Color == Color.BLACK && w.Right.Color == Color.BLACK)   
                     {
                         w.Color = Color.RED;
                         x = x.Parent;
@@ -311,7 +306,7 @@ namespace RedBlackTrees_v2
                         w = x.Parent.Left;
                     }
 
-                    if (w.Left.Color == Color.BLACK && w.Right.Color == Color.BLACK)    // Maybe else if?
+                    if (w.Left.Color == Color.BLACK && w.Right.Color == Color.BLACK)    
                     {
                         w.Color = Color.RED;
                         x = x.Parent;
@@ -340,7 +335,26 @@ namespace RedBlackTrees_v2
         }
 
 
-
+        public Node Search(int i)
+        {
+            Node node = Root;
+            while (node != NIL)
+            {
+                if (node.Key == i)
+                {
+                    return node;
+                }
+                else if (node.Key > i)
+                {
+                    node = node.Left;
+                }
+                else
+                {
+                    node = node.Right;
+                }
+            }
+            return null;
+        }
 
     }
 }

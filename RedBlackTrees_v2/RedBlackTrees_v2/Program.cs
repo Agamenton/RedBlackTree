@@ -16,13 +16,15 @@ namespace RedBlackTrees_v2
             while (true)
             {
                 Console.WriteLine("Do you want to run Test?\n[Y / N]");
-                int input = Console.Read();
-                if (Convert.ToChar(input).ToString().ToLower().Equals("n"))
+                var input = Console.ReadKey();
+                if (input.Key == ConsoleKey.N)
                 {
                     break;
                 }
-
-                Test(howManyNodes, keysRange);
+                else if(input.Key == ConsoleKey.Y)
+                {
+                    Test(howManyNodes, keysRange);
+                }
             }
 
             Console.WriteLine("Testing Red-Black Trees finished\n(Press anything to end)");
@@ -50,8 +52,6 @@ namespace RedBlackTrees_v2
 
             try
             {
-
-
                 while (nodes.Count < maxNodes)
                 {
                     int newKey = random.Next(maxKey);
@@ -69,9 +69,11 @@ namespace RedBlackTrees_v2
                 foreach (Node n in nodes)
                 {
                     Console.WriteLine("-----------------------");
-                    Console.WriteLine("Inserting key: " + n.Key);
+                    Console.WriteLine("Inserted key: " + n.Key);
                     t.RedBlackInsert(t, n);
-                    Printer.PrintNode(t.Root);
+                    //Printer.PrintNode(t.Root);
+                    Printer2.Print(t);
+                    Console.WriteLine();
                     insertCount++;
                 }
                 Console.WriteLine("= = = = INSERTS DONE = = = =\n");
@@ -85,14 +87,16 @@ namespace RedBlackTrees_v2
             try
             {
                 Console.WriteLine("================================================");
-                Console.WriteLine("Deleting all nodes");
+                Console.WriteLine("Now Deleting nodes");
                 int deleteCount = 0;
                 foreach (Node n in nodes)
                 {
                     Console.WriteLine("-----------------------");
-                    Console.WriteLine("Deleting key: " + n.Key);
+                    Console.WriteLine("Deleted key: " + n.Key);
                     t.RedBlackDelete(t, n);
-                    Printer.PrintNode(t.Root);
+                    //Printer.PrintNode(t.Root);
+                    Printer2.Print(t);
+                    Console.WriteLine();
                     deleteCount++;
                 }
                 Console.WriteLine("= = = = DELETES DONE = = = =\n");
@@ -102,9 +106,6 @@ namespace RedBlackTrees_v2
                 Console.WriteLine(e);
                 throw;
             }
-
-
-
         }
     }
 }
